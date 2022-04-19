@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @charset "UTF-8";
 @font-face {
   font-family: icons;
@@ -138,7 +140,7 @@ body {
 body {
   color: #000;
   line-height: 1;
-  font-family: "Arial";
+  font-family: "Rubik";
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -150,7 +152,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Arial";
+  font-family: "Rubik";
   font-size: inherit;
 }
 
@@ -404,8 +406,8 @@ body.popup-show::after {
   }
 }
 .header__logo img {
-  width: 100px;
-  height: 50px;
+  width: 120px;
+  height: 40px;
 }
 @media (max-width: 61.99875em) {
   .header__menu {
@@ -592,13 +594,13 @@ body.popup-show::after {
   }
 }
 .footer__logo {
-  width: 200px;
-  height: 100px;
+  width: 210px;
+  height: 70px;
 }
 @media (max-width: 47.99875em) {
   .footer__logo {
     width: 150px;
-    height: 75px;
+    height: 50px;
   }
 }
 .footer__policy {
@@ -807,20 +809,19 @@ body.popup-show::after {
 }
 .mainabout__header {
   display: grid;
-  gap: 30px;
   justify-items: center;
 }
 .mainabout__title {
   font-size: 1.875rem;
 }
 .mainabout__logo img {
-  width: 200px;
-  height: 100px;
+  width: 210px;
+  height: 70px;
 }
 @media (max-width: 47.99875em) {
   .mainabout__logo img {
     width: 150px;
-    height: 75px;
+    height: 50px;
   }
 }
 .mainabout__body {
