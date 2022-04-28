@@ -483,11 +483,15 @@ body.popup-show::after {
   justify-content: start;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
+}
+.popup__row:not(:last-child) {
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 .popup__item {
-  border-right: 1px solid rgb(0, 0, 0);
   padding: 15px;
+}
+.popup__item:not(:last-child) {
+  border-right: 1px solid rgb(0, 0, 0);
 }
 @media (max-width: 47.99875em) {
   .popup__item {
