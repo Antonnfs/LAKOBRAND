@@ -5029,9 +5029,9 @@
           },
           breakpoints: {
             320: { slidesPerView: 1, spaceBetween: 0, autoHeight: !0 },
-            768: { slidesPerView: 2, spaceBetween: 0 },
-            992: { slidesPerView: 2, spaceBetween: 0 },
-            1268: { slidesPerView: 2, spaceBetween: 0 },
+            768: { slidesPerView: 1, spaceBetween: 0 },
+            992: { slidesPerView: 1, spaceBetween: 0 },
+            1268: { slidesPerView: 1, spaceBetween: 0 },
           },
           on: {},
         }),
@@ -5180,6 +5180,20 @@
       });
     }
   }, 0),
+    window.addEventListener("click", function (e) {
+      if (e.target.hasAttribute("data-add-to-cart")) {
+        const t = e.target.closest("[data-pid]"),
+          s = {
+            productId: t.dataset.pid,
+            imgSrc: t.querySelector("img").getAttribute("src"),
+            title: t.querySelector(".product__name").innerText,
+            size: t.querySelector("input:checked + label").innerText,
+            price: t.querySelector("[data-currency]").innerText,
+            counter: t.querySelector("[data-counter]").value,
+          };
+        console.log(s);
+      }
+    }),
     (window.FLS = !0),
     (function (e) {
       let t = new Image();
