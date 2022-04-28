@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220423221831">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220428112528">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
 		<header data-scroll-show="50" class="header">
 			<div class="header__container">
 				<a href="index.html" class="header__logo">
-					<img src="img/logo/logo-transparent/logo-transparent-1-cut.png" alt="">
+					<img width="100px" height="33.3px" src="img/logo/logo-transparent/logo-transparent-1-cut.png" alt="">
 				</a>
 				<div class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -33,9 +33,18 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="header__cart"><span>1</span>
-					<img src="img/logo/bag.svg" alt="">
-				</div>
+				<button class="header__cart"><span data-cart-counter>0</span>
+					<img width="40px" height="40px" src="img/logo/bag.svg" alt="">
+					<div hidden class="cart">
+						<h4 class="cart__title">Кошик</h4>
+						<h5 data-cart-empty class="cart__label">Ваш кошик порожній</h5>
+						<div class="cart__wrapper">
+							<div class="cart-item">
+
+							</div>
+						</div>
+					</div>
+				</button>
 			</div>
 		</header>
 		<main class="page">
@@ -143,7 +152,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220423221831"></script>
+	<script src="js/app.min.js?_v=20220428112528"></script>
 </body>
 
 </html>
