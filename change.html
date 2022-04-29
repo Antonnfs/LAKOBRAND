@@ -6,15 +6,43 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220428112528">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220429032756">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="wrapper ">
+	<div class="wrapper _border">
 		<div class="header-padding"></div>
+		<div class="cart">
+			<h4 class="cart__title">Кошик</h4>
+			<h5 data-cart-empty class="cart__label">Ваш кошик порожній</h5>
+			<!--Cart wrapper-->
+			<div class="cart__wrapper">
+				<!--item cart-->
+				<div data-pid="" class="item-cart">
+					<div class="item-cart">
+						<img class="item-cart__img" src="img/mainslider/04.jpeg" alt="">
+					</div>
+					<div class="item-cart__info">
+						<h3 class="item-cart__name ">Боді BASIC бежевий</h3>
+						<div data-currency class="item-cart__price">1900&nbsp;₴</div>
+						<h5 class="item-cart__size">Розмір: </h5>
+						<div class="item-cart__quantity quantity">
+							<h4 class="quantity__title">Кількість:</h4>
+							<div class="quantity__counter">
+								<button class="quantity__button quantity__button_minus">-</button>
+								<input data-counter type="phone" value="1" class="quantity__value">
+								<button class="quantity__button quantity__button_plus">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--item cart-->
+			</div>
+			<!--Cart wrapper-->
+		</div>
 		<header data-scroll-show="50" class="header">
 			<div class="header__container">
 				<a href="index.html" class="header__logo">
@@ -35,15 +63,7 @@
 				</div>
 				<button class="header__cart"><span data-cart-counter>0</span>
 					<img width="40px" height="40px" src="img/logo/bag.svg" alt="">
-					<div hidden class="cart">
-						<h4 class="cart__title">Кошик</h4>
-						<h5 data-cart-empty class="cart__label">Ваш кошик порожній</h5>
-						<div class="cart__wrapper">
-							<div class="cart-item">
 
-							</div>
-						</div>
-					</div>
 				</button>
 			</div>
 		</header>
@@ -151,7 +171,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220428112528"></script>
+	<script src="js/app.min.js?_v=20220429032756"></script>
 </body>
 
 </html>

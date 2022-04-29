@@ -6,15 +6,43 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220428112528">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220429032756">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="wrapper ">
+	<div class="wrapper _border">
 		<div class="header-padding"></div>
+		<div class="cart">
+			<h4 class="cart__title">Кошик</h4>
+			<h5 data-cart-empty class="cart__label">Ваш кошик порожній</h5>
+			<!--Cart wrapper-->
+			<div class="cart__wrapper">
+				<!--item cart-->
+				<div data-pid="" class="item-cart">
+					<div class="item-cart">
+						<img class="item-cart__img" src="img/mainslider/04.jpeg" alt="">
+					</div>
+					<div class="item-cart__info">
+						<h3 class="item-cart__name ">Боді BASIC бежевий</h3>
+						<div data-currency class="item-cart__price">1900&nbsp;₴</div>
+						<h5 class="item-cart__size">Розмір: </h5>
+						<div class="item-cart__quantity quantity">
+							<h4 class="quantity__title">Кількість:</h4>
+							<div class="quantity__counter">
+								<button class="quantity__button quantity__button_minus">-</button>
+								<input data-counter type="phone" value="1" class="quantity__value">
+								<button class="quantity__button quantity__button_plus">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--item cart-->
+			</div>
+			<!--Cart wrapper-->
+		</div>
 		<header data-scroll-show="50" class="header">
 			<div class="header__container">
 				<a href="index.html" class="header__logo">
@@ -35,28 +63,19 @@
 				</div>
 				<button class="header__cart"><span data-cart-counter>0</span>
 					<img width="40px" height="40px" src="img/logo/bag.svg" alt="">
-					<div hidden class="cart">
-						<h4 class="cart__title">Кошик</h4>
-						<h5 data-cart-empty class="cart__label">Ваш кошик порожній</h5>
-						<div class="cart__wrapper">
-							<div class="cart-item">
 
-							</div>
-						</div>
-					</div>
 				</button>
 			</div>
 		</header>
 		<main class="page">
-			<section class="product">
+			<section data-pid="body01beige" class="product">
 				<div class="product__container">
-
 					<div class="product__content">
 						<div class="product__slider">
 							<div class="product__swiper">
 								<div class="product__slide">
 									<div class="product-ibg">
-										<img src="img/mainslider/04.jpeg" alt="">
+										<img class="product-img" src="img/mainslider/04.jpeg" alt="">
 									</div>
 								</div>
 								<div class="product__slide">
@@ -79,23 +98,24 @@
 								<div class="swiper-scrollbar"></div>-->
 						</div>
 						<div class="product__info">
-							<div class="product__name title">Боді BASIC бежевий</div>
+							<h3 class="product__name title">Боді BASIC бежевий</h3>
+
 							<div data-item-price class="product__price price-product">
-								<div class="price-product__value">1900</div>
-								<div class="price-product__currency">&nbsp;UAH</div>
+								<div data-currency class="price-product__value">1900&nbsp;₴</div>
+								<!--<div class="price-product__currency">&nbsp;UAH</div>-->
 							</div>
 
 							<div class="product__size size-product">
 								<h5 class="size-product__title">Виберіть ваш розмір:</h5>
 								<div class="size-product__buttons">
-									<input name="size" checked type="radio" id="xs" class="size-product__input">
-									<label for="xs" class="size-product__label">XS</label>
-									<input name="size" type="radio" id="s" class="size-product__input">
-									<label for="s" class="size-product__label">S</label>
-									<input name="size" type="radio" id="m" class="size-product__input">
-									<label for="m" class="size-product__label">M</label>
-									<input name="size" type="radio" id="l" class="size-product__input">
-									<label for="l" class="size-product__label">L</label>
+									<input name="size" checked type="radio" id="XS" class="size-product__input">
+									<label for="XS" class="size-product__label">XS</label>
+									<input name="size" type="radio" id="S" class="size-product__input">
+									<label for="S" class="size-product__label">S</label>
+									<input name="size" type="radio" id="M" class="size-product__input">
+									<label for="M" class="size-product__label">M</label>
+									<input name="size" type="radio" id="L" class="size-product__input">
+									<label for="L" class="size-product__label">L</label>
 								</div>
 							</div>
 							<div class="product__add-to-cart">
@@ -103,7 +123,7 @@
 									<h4 class="quantity__title">Кількість:</h4>
 									<div class="quantity__counter">
 										<button class="quantity__button quantity__button_minus">-</button>
-										<input type="phone" value="1" class="quantity__value">
+										<input data-counter type="phone" value="1" class="quantity__value">
 										<button class="quantity__button quantity__button_plus">+</button>
 									</div>
 								</div>
@@ -286,7 +306,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220428112528"></script>
+	<script src="js/app.min.js?_v=20220429032756"></script>
 </body>
 
 </html>

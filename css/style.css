@@ -1298,6 +1298,10 @@ button.swiper-pagination-bullet {
   }
 }
 
+._border > .header {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
 .header {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -1307,11 +1311,10 @@ button.swiper-pagination-bullet {
   left: 0;
   z-index: 50;
   transition: all 0.5s ease 0s;
-  border-bottom: 1px solid rgb(0, 0, 0);
 }
 .header._header-scroll {
-  background: rgb(255, 255, 255);
   transition: all 0.5s ease 0s;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 .header__container {
   display: grid;
@@ -1652,8 +1655,15 @@ button.swiper-pagination-bullet {
   padding-bottom: 100px;
 }
 
+.mainslider {
+  background: rgb(255, 255, 255);
+}
+.mainslider__swiper {
+  overflow: visible;
+}
 .mainslider-ibg {
   padding-bottom: calc(100vh - 70px);
+  border: 1px solid rgb(0, 0, 0);
 }
 @media (max-width: 64.06125em) {
   .mainslider-ibg {
