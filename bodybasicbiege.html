@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220429032756">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220515174339">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,28 +20,13 @@
 			<h5 data-cart-empty class="cart__label">Ваш кошик порожній</h5>
 			<!--Cart wrapper-->
 			<div class="cart__wrapper">
-				<!--item cart-->
-				<div data-pid="" class="item-cart">
-					<div class="item-cart">
-						<img class="item-cart__img" src="img/mainslider/04.jpeg" alt="">
-					</div>
-					<div class="item-cart__info">
-						<h3 class="item-cart__name ">Боді BASIC бежевий</h3>
-						<div data-currency class="item-cart__price">1900&nbsp;₴</div>
-						<h5 class="item-cart__size">Розмір: </h5>
-						<div class="item-cart__quantity quantity">
-							<h4 class="quantity__title">Кількість:</h4>
-							<div class="quantity__counter">
-								<button class="quantity__button quantity__button_minus">-</button>
-								<input data-counter type="phone" value="1" class="quantity__value">
-								<button class="quantity__button quantity__button_plus">+</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--item cart-->
+
 			</div>
 			<!--Cart wrapper-->
+			<div class="cart__total total-cart">
+				<h5 class="total-cart__total title title_left ">Итого:&nbsp; <span class="total-cart__price">1900<span class="uah">&nbsp;₴</span></span></h5>
+				<a href="" class="total-cart__order button button_black _icon-arrow-link">Оформить заказ</a>
+			</div>
 		</div>
 		<header data-scroll-show="50" class="header">
 			<div class="header__container">
@@ -89,22 +74,16 @@
 									</div>
 								</div>
 							</div>
-							<!-- If we need pagination -->
 							<div class="swiper-pagination"></div>
-							<!-- If we need navigation buttons-->
 							<div class="swiper-button-prev"></div>
 							<div class="swiper-button-next"></div>
-							<!-- If we need scrollbar 
-								<div class="swiper-scrollbar"></div>-->
 						</div>
 						<div class="product__info">
 							<h3 class="product__name title">Боді BASIC бежевий</h3>
-
 							<div data-item-price class="product__price price-product">
 								<div data-currency class="price-product__value">1900&nbsp;₴</div>
 								<!--<div class="price-product__currency">&nbsp;UAH</div>-->
 							</div>
-
 							<div class="product__size size-product">
 								<h5 class="size-product__title">Виберіть ваш розмір:</h5>
 								<div class="size-product__buttons">
@@ -127,7 +106,7 @@
 										<button class="quantity__button quantity__button_plus">+</button>
 									</div>
 								</div>
-								<button data-add-to-cart type="button" class="product__cart-button _icon-arrow-link button">Додати в кошик</button>
+								<button data-add-to-cart type="button" class="product__cart-button _icon-arrow-link button button_black">Додати в кошик</button>
 							</div>
 							<div class="product__description">
 								<h3 class="title title_left">Опис товару</h3>
@@ -139,7 +118,6 @@
 								<button data-popup="#popup" class="product__button button table-sizes">Таблиця розмірів</button>
 								<button data-popup="#popup" class="product__button button care">Догляд за річчю</button>
 							</div>
-
 							<div class="product__color color-product">
 								<h5 class="color-product__title">Усі кольори:</h5>
 								<div class="color-product__values">
@@ -220,16 +198,17 @@
 								<li class="contacts-footer__item"><a href="https://www.instagram.com/lakobrand/" class="contacts-footer__link _icon-instagram">@lakobrand</a></li>
 								<li class="contacts-footer__item"><a href="https://t.me/lakobrand" class="contacts-footer__link _icon-send">t.me/lakobrand</a></li>
 								<li class="contacts-footer__item"><a href="tel:+380970621245" class="contacts-footer__link _icon-phone">+380970621245</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Крівій Ріг, пр. Миру 29-Б.</a></li>
+								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
 							</ul>
 						</div>
 						<div class="contacts-footer__column">
 							<div class="contacts-footer__title">Наші адреси</div>
 							<ul class="contacts-footer__list">
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Крівій Ріг, пр. Миру 29-Б.</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Крівій Ріг, пр. Миру 29-Б.</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Крівій Ріг, пр. Миру 29-Б.</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Крівій Ріг, пр. Миру 29-Б.</a></li>
+								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
+								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
+								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
+								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
+
 							</ul>
 						</div>
 						<div class="contacts-footer__column">
@@ -306,7 +285,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220429032756"></script>
+	<script src="js/app.min.js?_v=20220515174339"></script>
 </body>
 
 </html>

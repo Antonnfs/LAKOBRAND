@@ -958,7 +958,7 @@
   }
   x.fn = C.prototype;
   const L = "resize scroll".split(" ");
-  function k(e) {
+  function $(e) {
     return function (...t) {
       if (void 0 === t[0]) {
         for (let t = 0; t < this.length; t += 1)
@@ -969,29 +969,29 @@
       return this.on(e, ...t);
     };
   }
-  k("click"),
-    k("blur"),
-    k("focus"),
-    k("focusin"),
-    k("focusout"),
-    k("keyup"),
-    k("keydown"),
-    k("keypress"),
-    k("submit"),
-    k("change"),
-    k("mousedown"),
-    k("mousemove"),
-    k("mouseup"),
-    k("mouseenter"),
-    k("mouseleave"),
-    k("mouseout"),
-    k("mouseover"),
-    k("touchstart"),
-    k("touchend"),
-    k("touchmove"),
-    k("resize"),
-    k("scroll");
-  const $ = {
+  $("click"),
+    $("blur"),
+    $("focus"),
+    $("focusin"),
+    $("focusout"),
+    $("keyup"),
+    $("keydown"),
+    $("keypress"),
+    $("submit"),
+    $("change"),
+    $("mousedown"),
+    $("mousemove"),
+    $("mouseup"),
+    $("mouseenter"),
+    $("mouseleave"),
+    $("mouseout"),
+    $("mouseover"),
+    $("touchstart"),
+    $("touchend"),
+    $("touchmove"),
+    $("resize"),
+    $("scroll");
+  const k = {
     addClass: function (...e) {
       const t = E(e.map((e) => e.split(" ")));
       return (
@@ -1399,17 +1399,17 @@
       return this;
     },
   };
-  Object.keys($).forEach((e) => {
-    Object.defineProperty(x.fn, e, { value: $[e], writable: !0 });
+  Object.keys(k).forEach((e) => {
+    Object.defineProperty(x.fn, e, { value: k[e], writable: !0 });
   });
   const M = x;
   function O(e, t) {
     return void 0 === t && (t = 0), setTimeout(e, t);
   }
-  function P() {
+  function A() {
     return Date.now();
   }
-  function A(e, t) {
+  function P(e, t) {
     void 0 === t && (t = "x");
     const s = S();
     let i, n, a;
@@ -1497,7 +1497,7 @@
   function B(e, t, s) {
     e.style.setProperty(t, s);
   }
-  function D(e) {
+  function q(e) {
     let { swiper: t, targetPosition: s, side: i } = e;
     const n = S(),
       a = -t.translate;
@@ -1527,11 +1527,11 @@
       };
     p();
   }
-  let q, G, H;
+  let D, G, H;
   function N() {
     return (
-      q ||
-        (q = (function () {
+      D ||
+        (D = (function () {
           const e = S(),
             t = b();
           return {
@@ -1556,7 +1556,7 @@
             gestures: "ongesturestart" in e,
           };
         })()),
-      q
+      D
     );
   }
   function W(e) {
@@ -2203,7 +2203,7 @@
       const { params: t, rtlTranslate: s, translate: i, $wrapperEl: n } = this;
       if (t.virtualTranslate) return s ? -i : i;
       if (t.cssMode) return i;
-      let a = A(n[0], e);
+      let a = P(n[0], e);
       return s && (a = -a), a || 0;
     },
     setTranslate: function (e, t) {
@@ -2260,7 +2260,7 @@
         else {
           if (!a.support.smoothScroll)
             return (
-              D({ swiper: a, targetPosition: -c, side: e ? "left" : "top" }), !0
+              q({ swiper: a, targetPosition: -c, side: e ? "left" : "top" }), !0
             );
           o.scrollTo({ [e ? "left" : "top"]: -c, behavior: "smooth" });
         }
@@ -2417,7 +2417,7 @@
         } else {
           if (!a.support.smoothScroll)
             return (
-              D({ swiper: a, targetPosition: s, side: e ? "left" : "top" }), !0
+              q({ swiper: a, targetPosition: s, side: e ? "left" : "top" }), !0
             );
           h.scrollTo({ [e ? "left" : "top"]: s, behavior: "smooth" });
         }
@@ -2758,7 +2758,7 @@
       }),
       (r.startX = u),
       (r.startY = h),
-      (n.touchStartTime = P()),
+      (n.touchStartTime = A()),
       (t.allowClick = !0),
       t.updateSize(),
       (t.swipeDirection = void 0),
@@ -2812,7 +2812,7 @@
         void (
           i.isTouched &&
           (Object.assign(a, { startX: c, startY: p, currentX: c, currentY: p }),
-          (i.touchStartTime = P()))
+          (i.touchStartTime = A()))
         )
       );
     if (i.isTouchEvent && n.touchReleaseOnEdges && !n.loop)
@@ -2966,7 +2966,7 @@
       s.isTouched &&
       (!0 === t.allowSlideNext || !0 === t.allowSlidePrev) &&
       t.setGrabCursor(!1);
-    const d = P(),
+    const d = A(),
       c = d - s.touchStartTime;
     if (t.allowClick) {
       const e = l.path || (l.composedPath && l.composedPath());
@@ -2977,7 +2977,7 @@
           t.emit("doubleTap doubleClick", l);
     }
     if (
-      ((s.lastClickTime = P()),
+      ((s.lastClickTime = A()),
       O(() => {
         t.destroyed || (t.allowClick = !0);
       }),
@@ -3614,7 +3614,7 @@
             startTranslate: void 0,
             allowThresholdMove: void 0,
             focusableElements: a.params.focusableElements,
-            lastClickTime: P(),
+            lastClickTime: A(),
             clickTimeout: void 0,
             velocities: [],
             allowMomentumBounce: void 0,
@@ -4911,7 +4911,7 @@
           slidesPerView: 2,
           spaceBetween: 0,
           autoHeight: !0,
-          speed: 3e3,
+          speed: 2500,
           loop: !0,
           navigation: {
             nextEl: ".about__more .more__item_next",
@@ -5060,10 +5060,12 @@
         );
     }
   }
-  let ke = !1;
-  var $e;
+  let $e = !1;
+  function ke() {
+    l(), document.documentElement.classList.remove("cart-open");
+  }
   setTimeout(() => {
-    if (ke) {
+    if ($e) {
       let e = new Event("windowScroll");
       window.addEventListener("scroll", function (t) {
         document.dispatchEvent(e);
@@ -5071,19 +5073,41 @@
     }
   }, 0),
     window.addEventListener("click", function (e) {
-      if (e.target.hasAttribute("data-add-to-cart")) {
-        const t = e.target.closest("[data-pid]"),
-          s = {
-            productId: t.dataset.pid,
-            imgSrc: t.querySelector("img").getAttribute("src"),
-            title: t.querySelector(".product__name").innerText,
-            size: t.querySelector("input:checked + label").innerText,
-            price: t.querySelector("[data-currency]").innerText,
-            counter: t.querySelector("[data-counter]").value,
-          };
-        console.log(s);
-      }
+      e.target.closest(".header__cart")
+        ? r && (o(), document.documentElement.classList.toggle("cart-open"))
+        : e.target.closest(".cart") || ke();
     }),
+    document.addEventListener("keyup", function (e) {
+      "Escape" === e.code && ke();
+    }),
+    document.documentElement.classList.add("cart-open"),
+    ke();
+  const Me = document.querySelector(".cart__wrapper");
+  var Oe;
+  window.addEventListener("click", function (e) {
+    if (e.target.hasAttribute("data-add-to-cart")) {
+      const t = e.target.closest("[data-pid]"),
+        s = {
+          productId: t.dataset.pid,
+          imgSrc: t.querySelector(".product-img").getAttribute("src"),
+          title: t.querySelector(".product__name").innerText,
+          size: t.querySelector("input:checked + label").innerText,
+          price: t.querySelector("[data-currency]").innerText,
+          counter: t.querySelector("[data-counter]").value,
+        };
+      console.log(s);
+      let i = Me.querySelector(`[data-pid="${s.productId}"]`),
+        n = Me.querySelector(`[data-size="${s.size}"]`);
+      if (i && n) {
+        let e = i.querySelector("[data-counter]");
+        e.value = parseInt(e.value) + parseInt(s.counter);
+      } else {
+        const e = `\t\n\t\t<div data-pid="${s.productId}" class="item-cart">\n\t\t\t<div class="item-cart__close">╳</div>\n\t\t\t<img class="item-cart__img" src=${s.imgSrc} alt="">\n\t\t\t<div class="item-cart__info">\n\t\t\t\t<h3 class="item-cart__name ">${s.title}</h3>\n\t\t\t\t<div data-currency class="item-cart__price">${s.price}</div>\n\t\t\t\t<h5 data-size="${s.size}" class="item-cart__size">Розмір:&nbsp;${s.size} </h5>\n\t\t\t\t<div class="item-cart__quantity quantity">\n\t\t\t\t\t<h4 class="quantity__title">Кількість:</h4>\n\t\t\t\t\t<div class="quantity__counter">\n\t\t\t\t\t\t<button class="quantity__button quantity__button_minus">-</button>\n\t\t\t\t\t\t<input data-counter type="phone" value="${s.counter}" class="quantity__value">\n\t\t\t\t\t\t<button class="quantity__button quantity__button_plus">+</button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>`;
+        Me.insertAdjacentHTML("afterbegin", e);
+      }
+      t.querySelector("[data-counter]").value = "1";
+    }
+  }),
     (window.FLS = !0),
     (function (e) {
       let t = new Image();
@@ -5204,16 +5228,19 @@
       }
     })(),
     new s({}),
-    (m.inputMaskModule = new f({ logging: $e })),
+    (m.inputMaskModule = new f({ logging: Oe })),
     document.addEventListener("click", function (e) {
       let t = e.target;
       if (t.closest(".quantity__button")) {
         let e = parseInt(t.closest(".quantity").querySelector("input").value);
         t.classList.contains("quantity__button_plus")
           ? e++
-          : (--e, e < 1 && (e = 1)),
+          : (--e,
+            t.closest(".cart__wrapper") && parseInt(e) < 1
+              ? t.closest(".item-cart").remove()
+              : e < 1 && (e = 1)),
           (t.closest(".quantity").querySelector("input").value = e);
-      }
+      } else t.closest(".item-cart__close") && t.closest(".item-cart").remove();
     }),
     new Le({}),
     (function () {
@@ -5245,7 +5272,7 @@
         document.addEventListener("watcherCallback", e);
     })(),
     (function () {
-      ke = !0;
+      $e = !0;
       const e = document.querySelector("header.header"),
         t = e.hasAttribute("data-scroll-show"),
         s = e.dataset.scrollShow ? e.dataset.scrollShow : 500,
