@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ua">
+	@@include('html/_head.htm',{
+	"title":"Боді BASIC"
+	})
+	<body>
+		<div class="wrapper _border">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section data-product="body01biege" class="product">
+					<div class="product__container">
+						<div class="product__content">
+							<div class="product__slider">
+								<div class="product__swiper">
+									<div class="product__slide">
+										<div class="product-ibg">
+											<img  class="product-img" src="@img/mainslider/04.jpeg" alt="">
+										</div>
+									</div>
+									<div class="product__slide">
+										<div class=" product-ibg">
+											<img src="@img/mainslider/05.jpeg" alt="">
+										</div>
+									</div>
+									<div class="product__slide">
+										<div class=" product-ibg">
+											<img src="@img/mainslider/06.jpeg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div> 
+							</div>
+							<div class="product__info">
+								<h3  class="product__name title">Боді BASIC бежевий</h3>
+								<div data-item-price class="product__price price-product">
+									<div data-currency class="price-product__value">1900&nbsp;₴</div>
+									<!--<div class="price-product__currency">&nbsp;UAH</div>-->
+								</div>
+								<div class="product__size size-product">
+									<h5 class="size-product__title">Виберіть ваш розмір:</h5>
+									<div class="size-product__buttons">
+										<!--
+										<a href="bodybasicbiege.html" data-size="XS" class="size-product__button size-product__button_active">XS</a>
+										<a href="bodybasicbiege.html" data-size="S" class="size-product__button">S</a>
+										<a href="bodybasicbiege.html" data-size="M" class="size-product__button">M</a>
+										<a href="bodybasicbiege.html" data-size="L" class="size-product__button">L</a>
+											-->
+										<input name="size" checked type="radio" id="XS" class="size-product__input">
+										<label  for="XS" class="size-product__label">XS</label>
+										<input name="size" type="radio" id="S" class="size-product__input">
+										<label for="S" class="size-product__label">S</label>
+										<input name="size" type="radio" id="M" class="size-product__input">
+										<label for="M" class="size-product__label">M</label>
+										<input name="size" type="radio" id="L" class="size-product__input">
+										<label for="L" class="size-product__label">L</label>
+											
+									</div>
+								</div>
+								<div class="product__add-to-cart">
+									<div class="product__quantity quantity">
+										<h4 class="quantity__title">Кількість:</h4>
+										<div class="quantity__counter">
+											<button class="quantity__button quantity__button_minus">-</button>
+											<input data-counter type="phone" value="1" class="quantity__value">
+											<button class="quantity__button quantity__button_plus">+</button>
+										</div>
+									</div>
+									<button data-add-to-cart type="button" class="product__cart-button _icon-arrow-link button button_black">Додати в кошик</button>
+								</div>
+								<div class="product__description">
+									<h3 class="title title_left">Опис товару</h3>
+									<p>Ідеально впишеться в будь-який гардероб, особливо під джинси або джинсову спідницю. Боді поза сезоном, можна легко поєднувати в весняно-осінній і літній капсулі.</p>
+									<p>Тканина: натуральна бавовна 95% | еластан 5% </p>
+									<p>Шви горловини, спинки, і низ боді оброблені спеціальною гумкою. Завдяки якій боді тримає форму, ідеально сидить по фігурі і після прання не змінюватиме зовнішній вигляд.</p>
+								</div>
+								<div class="product__buttons">
+									<button data-popup="#popup"  class="product__button button table-sizes">Таблиця розмірів</button>
+									<button data-popup="#popup"  class="product__button button care">Догляд за річчю</button>
+								</div>
+								<div class="product__color color-product">
+									<h5 class="color-product__title">Усі кольори:</h5>
+									<div class="color-product__values">
+										<a href="#" class="color-product__value color-product__value_biege color-product__value_active"></a>
+										<a href="#" class="color-product__value color-product__value_red"></a>
+										<a href="#" class="color-product__value color-product__value_black"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="maincatalogue">
+					<div class="maincatalogue__container">
+						<div class="maincatalogue__title">Схожі товари</div>
+						<div class="maincatalogue__content">
+							<div class="maincatalogue__card card-maincatalogue">
+								<a href="#" class="card-maincatalogue__body ">
+									<div class="card-maincatalogue__image _icon-search">
+										<div class="card-maincatalogue__img-ibg ">
+											<img  src="@img/maincatalogue/01.jpeg" alt="">
+										</div>
+									</div>
+									<div class="card-maincatalogue__name">Плаття LIZA</div>
+									<div class="card-maincatalogue__price">1500&nbsp;₴</div>
+								</a>
+							</div>
+							<div class="maincatalogue__card card-maincatalogue">
+								<a href="#" class="card-maincatalogue__body ">
+									<div class="card-maincatalogue__image _icon-search">
+										<div class="card-maincatalogue__img-ibg">
+											<img src="@img/maincatalogue/02.jpeg" alt="">
+										</div>
+									</div>
+									<div class="card-maincatalogue__name">Костюм KATE</div>
+									<div class="card-maincatalogue__price">2000&nbsp;₴</div>
+								</a>
+							</div>
+							<div class="maincatalogue__card card-maincatalogue">
+								<a href="#" class="card-maincatalogue__body ">
+									<div class="card-maincatalogue__image _icon-search">
+										<div class="card-maincatalogue__img-ibg">
+											<img src="@img/maincatalogue/03.jpeg" alt="">
+										</div>
+									</div>
+									<div class="card-maincatalogue__name">Боди BASIC</div>
+									<div class="card-maincatalogue__price">1000&nbsp;₴</div>
+								</a>
+							</div>
+							<div class="maincatalogue__card card-maincatalogue">
+								<a href="#" class="card-maincatalogue__body  ">
+									<div class="card-maincatalogue__image _icon-search">
+										<div class="card-maincatalogue__img-ibg ">
+											<img src="@img/maincatalogue/04.jpeg" alt="">
+										</div>
+									</div>
+									<div class="card-maincatalogue__name">Боді COMFORT</div>
+									<div class="card-maincatalogue__price">1500&nbsp;₴</div>
+								</a>
+							</div>
+						</div>
+						<a href="catalog.html" class="maincatalogue__button button">Каталог</a>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

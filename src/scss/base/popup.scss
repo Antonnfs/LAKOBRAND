@@ -1,0 +1,165 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.738);
+	//background: url('@img/logo/cover.jpg') center / cover no-repeat;
+	position:  fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+	
+}
+body.popup-show::after {
+	opacity: 1;
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	overflow: visible;
+	@media (max-width:$mobileSmall){
+		padding: 5px 5px;
+	}
+
+	pointer-events: none;
+	// /popup__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		flex: 1 1 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .popup__content
+	&__content {
+		color: rgb(0, 0, 0);
+		display: grid;
+		gap: 20px;
+		justify-items: start;
+		visibility: hidden;
+		transform: scale(0);
+		transition: transform 0.3s ease 0s;
+		background-color: rgb(255, 255, 255);
+		padding: 20px;
+		width: 100%;
+		max-width: 900px;
+		border: 1px solid rgb(0, 0, 0);
+		border-radius: 0px;
+		.lock & {
+			visibility: visible;
+		}
+		@media (max-width:$mobile){
+			gap: 15px;
+			padding: 10px;
+		}
+		@media (max-width:$mobileSmall){
+			gap: 5px;
+			padding: 5px 10px;
+		}
+	}
+	// .popup__close
+	&__close {
+		@media (max-width:$mobileSmall){
+			 font-size: rem(14); 
+		}
+		&::before {
+			content: '╳';
+			margin-right: 10px;
+			@media (max-width:$mobileSmall){
+				font-size: rem(12); 
+
+			}
+		}
+	}
+	// .popup__title
+	&__title {
+	justify-self: center;
+	font-size: rem(30);
+	@media (max-width:$mobile){
+		font-size: rem(20);
+	}
+	@media (max-width:$mobileSmall){
+		font-size: rem(16);
+
+	}
+	}
+	// .popup__body
+	&__body {
+		display: grid;
+		gap: 15px;
+		//grid-template-columns: repeat(2, 1fr);
+	}
+	// .popup__table
+	&__table {
+		font-size: rem(20);
+		justify-self: stretch;
+		align-self: start;
+		display: grid;	
+		align-items: stretch;
+		justify-content: stretch;
+		border: 1px solid rgb(0, 0, 0);
+	}
+	// .popup__row
+	&__row {
+		display: grid;
+		justify-content: start;
+		align-items: center;
+		grid-template-columns: repeat(4, 1fr);
+		&:not(:last-child) {
+			border-bottom: 1px solid rgb(0, 0, 0);
+		}
+	}
+	// .popup__item
+	&__item {
+		&:not(:last-child) {
+			border-right: 1px solid rgb(0, 0, 0);
+
+		}
+		padding:  15px;
+		@media (max-width:$mobile){
+			padding:  5px;
+			font-size: rem(16);
+		}
+		@media (max-width:$mobileSmall){
+			font-size: rem(12);
+		}
+	}
+	// .popup__text
+	&__text {
+		display: grid;
+		gap: 15px;
+		padding: 5px;
+		@media (max-width:$mobile){
+			 font-size: rem(14); 
+		}
+		@media (max-width:350px){
+			gap: 5px;
+			padding: 0px;
+			font-size: rem(11);
+		}
+	}
+
+}
