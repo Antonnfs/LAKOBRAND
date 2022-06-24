@@ -4,7 +4,9 @@
 	cursor: pointer;
 	border: 1px solid black;
 	transition: all 0.3s ease 0s;
-
+	&:active {
+		background: rgba(255, 255, 255, 0.097);
+	}
 	&:before {
 		display: flex;
 		order: 2;
@@ -23,11 +25,14 @@
 		border: 1px solid black;
 		background: #000;
 		transition: all 0.3s ease 0s;
+		
 		@media (any-hover: hover){
 			&:hover{
-			
 				background: rgba(0, 0, 0, 0.781);
 			}
+		}
+		&:active {
+			background: rgba(255, 255, 255, 0.097);
 		}
 	}
 }
@@ -48,7 +53,6 @@
 	}
 	@media (max-width:$mobile){
 		font-size: rem(25);
-
 	}
 }
 

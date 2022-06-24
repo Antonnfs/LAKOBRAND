@@ -71,10 +71,10 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formSubmit(true);
 
 /* (В работе) Работа с масками. */
- flsForms.formMasks();
+// flsForms.formMasks();
 
 /* Модуль формы "колличество" */
- flsForms.formQuantity();
+flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
 // flsForms.formViewpass();

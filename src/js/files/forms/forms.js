@@ -1,6 +1,7 @@
 // Подключение функционала "Чертогов Фрилансера"
 // Вспомогательные функции
 import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../functions.js";
+import { countIconValue } from "../addToCart.js";
 // Модуль прокрутки к блоку
 import { gotoBlock } from "../scroll/gotoblock.js";
 // Класс select
@@ -243,24 +244,36 @@ export function formViewpass() {
 }
 /* Модуь формы "колличество" */
 export function formQuantity() {
-	document.addEventListener("click", function (e) {
+	window.addEventListener("click", function (e) {
 		let targetElement = e.target;
 		if (targetElement.closest('.quantity__button')) {
 			let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
 			if (targetElement.classList.contains('quantity__button_plus')) {
-				value++;
+				if (targetElement.closest('.cart__wrapper')) {
+					
+					value++;
+					countIconValue();
+				} else {
+					value++;
+				}
 			} else {
-				--value;
+				if (targetElement.closest('.cart__wrapper')) {
+					
+					--value;
+					countIconValue();
+				} else {
+					--value;
+				}
 				if(targetElement.closest('.cart__wrapper') && parseInt(value) < 1) {
 					targetElement.closest('.item-cart').remove();
-				
+					countIconValue();
 				} else if(value < 1) 
 					value = 1;
 			}
 			targetElement.closest('.quantity').querySelector('input').value = value;
-		} else if (targetElement.closest('.item-cart__close')) {
+		} else if (targetElement.closest('.item-cart__remove')) {
 			targetElement.closest('.item-cart').remove();
-
+			countIconValue();
 		}
 	});
 }
