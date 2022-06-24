@@ -1255,6 +1255,9 @@ button.swiper-pagination-bullet {
   border: 1px solid black;
   transition: all 0.3s ease 0s;
 }
+.button:active {
+  background: rgba(255, 255, 255, 0.097);
+}
 .button:before {
   display: flex;
   order: 2;
@@ -1278,6 +1281,9 @@ button.swiper-pagination-bullet {
   .button_black:hover {
     background: rgba(0, 0, 0, 0.781);
   }
+}
+.button_black:active {
+  background: rgba(255, 255, 255, 0.097);
 }
 
 .title {
@@ -1640,7 +1646,6 @@ button.swiper-pagination-bullet {
 
 .cart {
   display: grid;
-  gap: 15px;
   align-content: start;
   position: fixed;
   top: calc(0% + 70px);
@@ -1686,7 +1691,7 @@ button.swiper-pagination-bullet {
 }
 .cart__label {
   font-size: 25px;
-  padding: 0 10px;
+  padding: 25px 10px;
 }
 .cart__wrapper {
   padding: 0 10px;
@@ -1703,7 +1708,7 @@ button.swiper-pagination-bullet {
   gap: 10px;
   position: relative;
 }
-.item-cart__close {
+.item-cart__remove {
   position: absolute;
   top: 0;
   left: 0;
@@ -1745,7 +1750,6 @@ button.swiper-pagination-bullet {
   display: grid;
   gap: 15px;
   justify-items: start;
-  border-top: 1px solid black;
   padding: 10px 10px;
 }
 .total-cart__total {
