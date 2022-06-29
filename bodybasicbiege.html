@@ -2,10 +2,10 @@
 <html lang="ua">
 
 <head>
-	<title>Боді BASIC</title>
+	<title>Боді BASIC Бежевий</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220624223508">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220629140314">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -14,13 +14,17 @@
 	<div class="wrapper _border">
 		<div class="header-padding"></div>
 		<div class="cart">
-			<h4 class="cart__title">Кошик</h4>
+			<div class="cart__header">
+				<h4 class="cart__title">Кошик</h4>
+			</div>
 			<h5 data-cart-empty class="cart__label">Ваш кошик порожній</h5>
 			<div class="cart__wrapper">
 			</div>
-			<div class="cart__total total-cart">
-				<!--<h5 class="total-cart__total title title_left ">Разом:&nbsp; <span class="total-cart__price">1900<span class="uah">&nbsp;₴</span></span></h5>
-		<a href="" class="total-cart__order button button_black _icon-arrow-link">Оформити замовлення</a>-->
+			<div class="cart__total total-cart none">
+				<h5 class="total-cart__total title title_left ">Разом:&nbsp; <span class="total-cart__price">0</span><span class="uah">&nbsp;₴</span></h5>
+				<a href="" class="total-cart__order button button_black _icon-arrow-link">Оформити замовлення</a>
+				<button data-cart-clear class="cart__button-clear button ">Очистити кошик</button>
+
 			</div>
 		</div>
 		<header data-scroll-show="50" class="header">
@@ -47,24 +51,34 @@
 			</div>
 		</header>
 		<main class="page">
-			<section data-product="body01biege" class="product">
+			<section data-product="bodyBasicBiege" class="product">
 				<div class="product__container">
 					<div class="product__content">
 						<div class="product__slider">
 							<div class="product__swiper">
 								<div class="product__slide">
 									<div class="product-ibg">
-										<img class="product-img" src="img/mainslider/04.jpeg" alt="">
+										<img class="product-img product-img_main" src="img/products/body/bodyBasic/bodyBasicBiege/bodyBasicBiege01.jpeg" alt="">
 									</div>
 								</div>
 								<div class="product__slide">
-									<div class=" product-ibg">
-										<img src="img/mainslider/05.jpeg" alt="">
+									<div class="product-ibg">
+										<img class="product-img" src="img/products/body/bodyBasic/bodyBasicBiege/bodyBasicBiege02.jpeg" alt="">
 									</div>
 								</div>
 								<div class="product__slide">
-									<div class=" product-ibg">
-										<img src="img/mainslider/06.jpeg" alt="">
+									<div class="product-ibg">
+										<img class="product-img" src="img/products/body/bodyBasic/bodyBasicBiege/bodyBasicBiege03.jpeg" alt="">
+									</div>
+								</div>
+								<div class="product__slide">
+									<div class="product-ibg">
+										<img class="product-img" src="img/products/body/bodyBasic/bodyBasicBiege/bodyBasicBiege04.jpeg" alt="">
+									</div>
+								</div>
+								<div class="product__slide">
+									<div class="product-ibg">
+										<img class="product-img" src="img/products/body/bodyBasic/bodyBasicBiege/bodyBasicBiege05.jpeg" alt="">
 									</div>
 								</div>
 							</div>
@@ -73,20 +87,13 @@
 							<div class="swiper-button-next"></div>
 						</div>
 						<div class="product__info">
-							<h3 class="product__name title">Боді BASIC бежевий</h3>
+							<h3 class="product__name title">Боді BASIC Бежевий</h3>
 							<div data-item-price class="product__price price-product">
-								<div data-currency class="price-product__value">1900&nbsp;₴</div>
-								<!--<div class="price-product__currency">&nbsp;UAH</div>-->
+								<div data-currency class="price-product__value">1000&nbsp;₴</div>
 							</div>
 							<div class="product__size size-product">
 								<h5 class="size-product__title">Виберіть ваш розмір:</h5>
 								<div class="size-product__buttons">
-									<!--
-										<a href="bodybasicbiege.html" data-size="XS" class="size-product__button size-product__button_active">XS</a>
-										<a href="bodybasicbiege.html" data-size="S" class="size-product__button">S</a>
-										<a href="bodybasicbiege.html" data-size="M" class="size-product__button">M</a>
-										<a href="bodybasicbiege.html" data-size="L" class="size-product__button">L</a>
-											-->
 									<input name="size" checked type="radio" id="XS" class="size-product__input">
 									<label for="XS" class="size-product__label">XS</label>
 									<input name="size" type="radio" id="S" class="size-product__input">
@@ -101,9 +108,9 @@
 								<div class="product__quantity quantity">
 									<h4 class="quantity__title">Кількість:</h4>
 									<div class="quantity__counter">
-										<button class="quantity__button quantity__button_minus">-</button>
+										<button data-action class="quantity__button quantity__button_minus">-</button>
 										<input data-counter disabled type="phone" value="1" class="quantity__value">
-										<button class="quantity__button quantity__button_plus">+</button>
+										<button data-action class="quantity__button quantity__button_plus">+</button>
 									</div>
 								</div>
 								<button data-add-to-cart type="button" class="product__cart-button _icon-cart button button_black">Додати</button>
@@ -112,7 +119,7 @@
 								<h3 class="title title_left">Опис товару</h3>
 								<p>Ідеально впишеться в будь-який гардероб, особливо під джинси або джинсову спідницю. Боді поза сезоном, можна легко поєднувати в весняно-осінній і літній капсулі.</p>
 								<p>Тканина: натуральна бавовна 95% | еластан 5% </p>
-								<p>Шви горловини, спинки, і низ боді оброблені спеціальною гумкою. Завдяки якій боді тримає форму, ідеально сидить по фігурі і після прання не змінюватиме зовнішній вигляд.</p>
+								<p>Шви горловини, спинки, і низ боді оброблені спеціальною гумкою, завдяки якій боді тримає форму, ідеально сидить по фігурі і після прання не змінюватиме зовнішній вигляд.</p>
 							</div>
 							<div class="product__buttons">
 								<button data-popup="#popup" class="product__button button table-sizes">Таблиця розмірів</button>
@@ -121,9 +128,9 @@
 							<div class="product__color color-product">
 								<h5 class="color-product__title">Усі кольори:</h5>
 								<div class="color-product__values">
-									<a href="#" class="color-product__value color-product__value_biege color-product__value_active"></a>
-									<a href="#" class="color-product__value color-product__value_red"></a>
-									<a href="#" class="color-product__value color-product__value_black"></a>
+									<a href="bodybasicbiege.html" class="color-product__value color-product__value_biege color-product__value_active"></a>
+									<a href="bodybasicmilky.html" class="color-product__value color-product__value_milky"></a>
+									<a href="bodybasicblack.html" class="color-product__value color-product__value_black"></a>
 								</div>
 							</div>
 						</div>
@@ -135,47 +142,47 @@
 					<div class="maincatalogue__title">Схожі товари</div>
 					<div class="maincatalogue__content">
 						<div class="maincatalogue__card card-maincatalogue">
-							<a href="#" class="card-maincatalogue__body ">
+							<a href="bodybasicblack.html" class="card-maincatalogue__body ">
 								<div class="card-maincatalogue__image _icon-search">
 									<div class="card-maincatalogue__img-ibg ">
-										<img src="img/maincatalogue/01.jpeg" alt="">
+										<img src="img/products/body/bodyBasic/bodyBasicBlack/bodyBasicBlack01.jpeg" alt="">
 									</div>
 								</div>
-								<div class="card-maincatalogue__name">Плаття LIZA</div>
-								<div class="card-maincatalogue__price">1500&nbsp;₴</div>
-							</a>
-						</div>
-						<div class="maincatalogue__card card-maincatalogue">
-							<a href="#" class="card-maincatalogue__body ">
-								<div class="card-maincatalogue__image _icon-search">
-									<div class="card-maincatalogue__img-ibg">
-										<img src="img/maincatalogue/02.jpeg" alt="">
-									</div>
-								</div>
-								<div class="card-maincatalogue__name">Костюм KATE</div>
-								<div class="card-maincatalogue__price">2000&nbsp;₴</div>
-							</a>
-						</div>
-						<div class="maincatalogue__card card-maincatalogue">
-							<a href="#" class="card-maincatalogue__body ">
-								<div class="card-maincatalogue__image _icon-search">
-									<div class="card-maincatalogue__img-ibg">
-										<img src="img/maincatalogue/03.jpeg" alt="">
-									</div>
-								</div>
-								<div class="card-maincatalogue__name">Боди BASIC</div>
+								<div class="card-maincatalogue__name">Боді BASIC Чорний</div>
 								<div class="card-maincatalogue__price">1000&nbsp;₴</div>
 							</a>
 						</div>
 						<div class="maincatalogue__card card-maincatalogue">
-							<a href="#" class="card-maincatalogue__body  ">
+							<a href="bodybasicmilky.html" class="card-maincatalogue__body ">
 								<div class="card-maincatalogue__image _icon-search">
-									<div class="card-maincatalogue__img-ibg ">
-										<img src="img/maincatalogue/04.jpeg" alt="">
+									<div class="card-maincatalogue__img-ibg">
+										<img src="img/products/body/bodyBasic/bodyBasicMilky/bodyBasicMilky08.jpeg" alt="">
 									</div>
 								</div>
-								<div class="card-maincatalogue__name">Боді COMFORT</div>
+								<div class="card-maincatalogue__name">Боді BASIC Молочний</div>
+								<div class="card-maincatalogue__price">1000&nbsp;₴</div>
+							</a>
+						</div>
+						<div class="maincatalogue__card card-maincatalogue">
+							<a href="bodykissred.html" class="card-maincatalogue__body  ">
+								<div class="card-maincatalogue__image _icon-search">
+									<div class="card-maincatalogue__img-ibg ">
+										<img src="img/products/body/bodyKiss/bodyKissRed/bodyKissRed04.jpeg" alt="">
+									</div>
+								</div>
+								<div class="card-maincatalogue__name">Боді KISS Червоний</div>
 								<div class="card-maincatalogue__price">1500&nbsp;₴</div>
+							</a>
+						</div>
+						<div class="maincatalogue__card card-maincatalogue">
+							<a href="bodykissmilky.html" class="card-maincatalogue__body ">
+								<div class="card-maincatalogue__image _icon-search">
+									<div class="card-maincatalogue__img-ibg">
+										<img src="img/products/body/bodyKiss/bodyKissMilky/bodyKissMilky03.jpeg" alt="">
+									</div>
+								</div>
+								<div class="card-maincatalogue__name">Боді KISS Молочний</div>
+								<div class="card-maincatalogue__price">1000&nbsp;₴</div>
 							</a>
 						</div>
 					</div>
@@ -186,7 +193,6 @@
 		<footer id="contacts" class="footer">
 			<div class="footer__container">
 				<div class="footer__content">
-					<!--<button data-goto="#home" data-goto-header class="footer__button button ">Головна</button>-->
 					<div class="footer__title">
 						<h3 class="footer__subtitle ">Контакти</h3>
 						<img class="footer__logo" src="img/logo/logo-transparent/logo-transparent-1-cut.png" alt="">
@@ -198,17 +204,7 @@
 								<li class="contacts-footer__item"><a href="https://www.instagram.com/lakobrand/" class="contacts-footer__link _icon-instagram">@lakobrand</a></li>
 								<li class="contacts-footer__item"><a href="https://t.me/lakobrand" class="contacts-footer__link _icon-send">t.me/lakobrand</a></li>
 								<li class="contacts-footer__item"><a href="tel:+380970621245" class="contacts-footer__link _icon-phone">+380970621245</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
-							</ul>
-						</div>
-						<div class="contacts-footer__column">
-							<div class="contacts-footer__title">Наші адреси</div>
-							<ul class="contacts-footer__list">
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
-								<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
-
+								<li class="contacts-footer__item"><a href="https://www.google.be/maps/place/%D0%BF%D1%80%D0%BE%D1%81%D0%BF.+%D0%9C%D0%B8%D1%80%D0%B0,+29%D0%B1,+%D0%9A%D1%80%D0%B8%D0%B2%D0%BE%D0%B9+%D0%A0%D0%BE%D0%B3,+%D0%94%D0%BD%D0%B5%D0%BF%D1%80%D0%BE%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+50000/@47.9083873,33.3850506,19.1z/data=!4m5!3m4!1s0x40db20a4bbd0c295:0x7f516ed8c04568a0!8m2!3d47.908641!4d33.3859769?hl=ru&authuser=0" class="contacts-footer__link _icon-location">м. Кривий Ріг, пр. Миру 29-Б.</a></li>
 							</ul>
 						</div>
 						<div class="contacts-footer__column">
@@ -228,7 +224,7 @@
 				</div>
 			</div>
 			<div class="footer__policy">
-				<p>© 2022 LAKO BRAND. </p>
+				<p>© 2022 LAKOBRAND. </p>
 				<p> All rights reserved.</p>
 			</div>
 
@@ -285,7 +281,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220624223508"></script>
+	<script src="js/app.min.js?_v=20220629140314"></script>
 </body>
 
 </html>
