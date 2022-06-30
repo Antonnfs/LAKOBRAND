@@ -1,0 +1,64 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+	padding: 10px 15px;
+	cursor: pointer;
+	border: 1px solid black;
+	transition: all 0.3s ease 0s;
+	&:active {
+		background: rgba(255, 255, 255, 0.097);
+	}
+	&:before {
+		display: flex;
+		order: 2;
+		margin-left: 10px;
+		padding-top: 2px;
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover){
+		&:hover{
+			background: #000;
+			color: #FFF;
+		}
+	}
+	&_black {
+		color: #fff;
+		border: 1px solid black;
+		background: #000;
+		transition: all 0.3s ease 0s;
+		
+		@media (any-hover: hover){
+			&:hover{
+				background: rgba(0, 0, 0, 0.781);
+			}
+		}
+		&:active {
+			background: rgba(255, 255, 255, 0.097);
+		}
+	}
+}
+
+// .title
+.title {
+	display: grid;
+	justify-content: center;
+	font-size: rem(30);
+	&_padding {
+		padding-bottom: 50px;
+		@media (max-width:$mobile){
+			padding-bottom: 30px;
+		}
+	}
+	&_left {
+		justify-content: left;
+	}
+	@media (max-width:$mobile){
+		font-size: rem(25);
+	}
+}
+
+.cart-open {
+	.page  {
+		opacity: 0.3;		
+		transition: all 0.3s ease 0s;
+	}
+}
