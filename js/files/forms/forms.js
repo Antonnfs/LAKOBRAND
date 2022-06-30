@@ -1,9 +1,7 @@
 // Подключение функционала "Чертогов Фрилансера"
 // Вспомогательные функции
 import { isMobile, _slideUp, _slideDown, _slideToggle, FLS } from "../functions.js";
-import { countIconValue } from "../addToCart.js";
-import { checkCartStatus } from "../addToCart.js";
-import { countTotal } from "../addToCart.js";
+import { countTotal, checkCartStatus, countIconValue } from "../addToCart.js";
 // Модуль прокрутки к блоку
 import { gotoBlock } from "../scroll/gotoblock.js";
 // Класс select

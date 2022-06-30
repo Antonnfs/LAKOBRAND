@@ -43,7 +43,7 @@ export function pageNavigation() {
 					const navigatorCurrentItem = document.querySelector(`[data-goto="${navigatorItem}"]`);
 					if (entry.isIntersecting) {
 						// Видим объект
-						 navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
+						navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
 						navigatorCurrentItem ? navigatorCurrentItem.classList.add('_navigator-active') : null;
 					} else {
 						// Не видим объект
