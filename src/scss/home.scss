@@ -1,7 +1,9 @@
 //====================================================================================================
 
 .mainslider {
-	background: rgb(255, 255, 255);
+	//background: rgb(137, 137, 137);
+	background: linear-gradient(2100deg, rgba(212,212,212,1) 10%, rgba(0,0,0,0.4360337885154062) 90%);
+
 	// .mainslider__slider
 	&__slider {}
 	// .mainslider__swiper
@@ -22,7 +24,7 @@
 	}
 }
 //========================================================================================================================================================
-#obj-pos-1 {object-position: center calc(65% - 5%);}
+//#obj-pos-1 {object-position: center calc(65% - 5%);}
 #obj-pos-2 {object-position: center calc(30% - 5%);} 
 #obj-pos-3 {object-position: center calc(24% - 5%);} 
 #obj-pos-4 {object-position: center calc(26% - 5%);} 

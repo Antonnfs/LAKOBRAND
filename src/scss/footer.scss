@@ -54,21 +54,22 @@
 }
 .contacts-footer {
 	display: grid;
+	justify-items: center;
 	align-items: start;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	padding: 30px 0;
 	gap: 30px;
 	@media (max-width:$mobile){
 		grid-template-columns: 1fr;
 		row-gap: 30px;
-
+		justify-items: start;
 
 	}
 	// .contacts-footer__column
 	&__column {
 		display: grid;
 		gap: 30px;
-		align-items: start;
+		align-items: center;
 		@media (max-width:$mobile){
 			&:not(:last-child) {
 				border-bottom: 1px solid black; 

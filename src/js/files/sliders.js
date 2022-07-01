@@ -56,17 +56,17 @@ function initSliders() {
 				//modifier: 1
 			//},
 			//effect: 'fade',
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 5000,
+			// 	disableOnInteraction: false,
+			// },
 			observer: true,
 			observeParents: true,
 			slidesPerView: 2,
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 2500,
-			loop: true,
+			//loop: true,
 			navigation: {
 				nextEl: '.about__more .more__item_next',
 				prevEl: '.about__more .more__item_prev',
@@ -78,7 +78,7 @@ function initSliders() {
 					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
+					slidesPerView: 1,
 					spaceBetween: 0,
 				},
 				992: {
