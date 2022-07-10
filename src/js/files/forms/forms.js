@@ -178,7 +178,6 @@ export function formSubmit(validate) {
 				const formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
 				const formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
 				const formData = new FormData(form);
-
 				form.classList.add('_sending');
 				const response = await fetch(formAction, {
 					method: formMethod,
@@ -243,36 +242,36 @@ export function formViewpass() {
 	});
 }
 /* Модуь формы "колличество" */
-export function formQuantity() {
-	window.addEventListener("click", function(e) {
-		let targetElement = e.target;
-		if (targetElement.closest('.quantity__button')) {
-			let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
-			if (targetElement.classList.contains('quantity__button_plus')) {
-				++value;
-			} else {
-				--value;
-			}
-			if(targetElement.closest('.cart__wrapper') && parseInt(value) < 1) {
-				targetElement.closest('.item-cart').remove();
-				countIconValue();
-				countTotal()
-				checkCartStatus()
-			} else if(value < 1) 
-				value = 1;
-			targetElement.closest('.quantity').querySelector('input').value = value;
-		} else if (targetElement.closest('.item-cart__remove')) {
-			targetElement.closest('.item-cart').remove();
-			countIconValue();
-			countTotal()
-			checkCartStatus()
-		}
-		if (targetElement.hasAttribute('data-action') && targetElement.closest('.cart__wrapper')) {
-			countIconValue();
-			countTotal()
-		}
-	});
-}
+// export function formQuantity() {
+// 	window.addEventListener("click", function(e) {
+// 		let targetElement = e.target;
+// 		if (targetElement.closest('.quantity__button')) {
+// 			let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
+// 			if (targetElement.classList.contains('quantity__button_plus')) {
+// 				++value;
+// 			} else {
+// 				--value;
+// 			}
+// 			if(targetElement.closest('.cart__wrapper') && parseInt(value) < 1) {
+// 				targetElement.closest('.item-cart').remove();
+// 				countIconValue();
+// 				countTotal()
+// 				checkCartStatus()
+// 			} else if(value < 1) 
+// 				value = 1;
+// 			targetElement.closest('.quantity').querySelector('input').value = value;
+// 		} else if (targetElement.closest('.item-cart__remove')) {
+// 			targetElement.closest('.item-cart').remove();
+// 			countIconValue();
+// 			countTotal()
+// 			checkCartStatus()
+// 		}
+// 		if (targetElement.hasAttribute('data-action') && targetElement.closest('.cart__wrapper')) {
+// 			countIconValue();
+// 			countTotal()
+// 		}
+// 	});
+// }
 /* Модуь звездного рейтинга */
 export function formRating() {
 	const ratings = document.querySelectorAll('.rating');

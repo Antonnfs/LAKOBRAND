@@ -23,10 +23,10 @@ export class InputMask {
 			const maskItems = data ? document.querySelectorAll(data) : document.querySelectorAll(`[data-mask]`);
 			if (maskItems.length) {
 				this.initMasks(maskItems);
-				this.setLogging(`Проснулся, построил масок: (${maskItems.length})`);
+				//this.setLogging(`Проснулся, построил масок: (${maskItems.length})`);
 				document.querySelector(`._mask-init`) ? this.setActions() : null;
 			} else {
-				this.setLogging('Нет ни одной маски. Сплю...zzZZZzZZz...');
+				//this.setLogging('Нет ни одной маски. Сплю...zzZZZzZZz...');
 			}
 		}
 	}
@@ -50,7 +50,7 @@ export class InputMask {
 		const maskName = maskData[0] ? maskData[0] : null;
 
 		if (!maskName) {
-			this.setLogging(`Маска для ${maskItem} не заполнена!`);
+			//this.setLogging(`Маска для ${maskItem} не заполнена!`);
 			return;
 		}
 
@@ -74,12 +74,8 @@ export class InputMask {
 			let inputValue = input.value;
 			const inputMask = this.getMask(input);
 			console.log(input.selectionStart);
-
-			/*
-			взять новые символы
-			заменить девятки на новые символы
-			*/
-
+			// взять новые символы
+			// заменить девятки на новые символы
 			var matrix = inputMask,
 				i = 0,
 				def = matrix.replace(/\D/g, ""),
@@ -88,10 +84,10 @@ export class InputMask {
 					return i < val.length ? val.charAt(i++) || def.charAt(i) : a
 				});
 
-			console.log(matrix);
-			console.log(def);
-			console.log(val);
-			console.log(new_value);
+			// console.log(matrix);
+			// console.log(def);
+			// console.log(val);
+			// console.log(new_value);
 
 			i = new_value.indexOf("_");
 			if (i != -1) {
@@ -102,31 +98,23 @@ export class InputMask {
 				function (a) {
 					return "\\d{1," + a.length + "}"
 				}).replace(/[+()]/g, "\\$&");
-
-
 			reg = new RegExp("^" + reg + "$");
 			input.value = new_value;
-
-			/*
-			if (!reg.test(inputValue) || inputValue.length < 5 || keyCode > 47 && keyCode < 58) {
-				inputValue = new_value;
-			}
-			if (e.type === "blur" && inputValue.length < 5) {
-				inputValue = "";
-			}
-			*/
-
-
+			// if (!reg.test(inputValue) || inputValue.length < 5 || keyCode > 47 && keyCode < 58) {
+			// 	inputValue = new_value;
+			// }
+			// if (e.type === "blur" && inputValue.length < 5) {
+			// 	inputValue = "";
+			// }
 			if (input.selectionStart > inputMask.length) {
 				e.preventDefault();
 				//inputValue = inputValue.slice(0, inputMask.length);
-
 			}
 		}
 	}
 	// Логгинг в консоль
 	setLogging(message) {
-		this.config.logging ? console.log(`[Elton Mask]: ${message}`) : null;
+		//this.config.logging ? console.log(`[Elton Mask]: ${message}`) : null;
 	}
 }
 

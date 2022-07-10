@@ -1,7 +1,6 @@
-// Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 import { bodyLock, bodyLockStatus, bodyLockToggle, bodyUnlock, isMobile} from './functions.js';
-//import { formQuantity } from './forms/forms.js';
-// Открытие корзины
+import {totalUpdate, orderItemsRender} from './orderform.js'
+
 export function cartInit() {
 	window.addEventListener('click', function(e) {
 		if(e.target.closest('.header__cart')) {
@@ -10,10 +9,7 @@ export function cartInit() {
 				document.documentElement.classList.toggle('cart-open');
 			}
 		} else {
-			//Закрытие на пустом месте
 			if (!e.target.closest('.cart')) {
-				//document.documentElement.classList.remove("cart-open");
-				//bodyUnlock()
 				cartClose()
 			}
 		}
@@ -26,7 +22,6 @@ export function cartInit() {
 	})
 }
 cartInit();
-
 export function cartOpen() {
 	document.documentElement.classList.add('cart-open');
 }
@@ -35,20 +30,16 @@ export function cartClose() {
 	document.documentElement.classList.remove('cart-open');
 }
 //========================================================================================================================================================
-//localStorage.clear()   // Убрать после завершения корзины
 console.log(localStorage);
-
-// Обёртка внутри корзины
 const cartWrapper = document.querySelector('.cart__wrapper');
 let productKey;
 let productInfo;
-
 formQuantity()
-
 checkCartStatus()
+
 // Отслеживаем клик на странице
 window.addEventListener('click', function(e) {
-	// Проверяем что клик был совершен на кнопке "Добавить в корзину" или изменено кол-во товара из корзины
+	// Проверяем что клик был совершен на кнопке "Добавить в корзину" 
 	if(e.target.hasAttribute('data-add-to-cart')) {
 		// Находим карточку с товаром, внутри которой был совершён клик
 		const product = e.target.closest('[data-product]');
@@ -92,6 +83,8 @@ window.addEventListener('click', function(e) {
 		checkCartStatus();
 		countTotal();
 		countIconValue();
+		totalUpdate()
+		orderItemsRender()
 	}
 })
 // Отрисовка корины после перезагрузки страницы
@@ -123,7 +116,7 @@ function modifyStorageInCart(productKey, productInfo, sign) {
 	} else if (sign === 'minus') {												
 		--prodStor.counter;  	
 	}
-	localStorage.setItem(productKey, JSON.stringify(prodStor) )  		
+	localStorage.setItem(productKey, JSON.stringify(prodStor) )
 }
 // Функция очистки элемента корзины для корректного вывода значений
 function cartClear() {
@@ -166,10 +159,10 @@ export function checkCartStatus() {
 	const cartEmptyBadge = document.querySelector('[data-cart-empty]');
 	// Блок "Итого" / "Оформить"
 	const orderForm = document.querySelector('.cart__total')
-	if (cartWrapper.children.length) {
+	if (!localStorage.getItem('totalQuantity') === '0' || cartWrapper.children.length) {
 		cartEmptyBadge.classList.add('none');
 		orderForm.classList.remove('none');
-		cartWrapper.style.padding='10px'
+		cartWrapper.style.padding='10px';
 	} else {
 		cartWrapper.style.padding='0px'
 		cartEmptyBadge.classList.remove('none');
@@ -222,27 +215,31 @@ export function formQuantity() {
 			} else {
 				--value;
 			}
-			if(e.target.closest('.cart__wrapper') && parseInt(value) < 1) {
+			if((e.target.closest('.cart__wrapper') || e.target.closest('.order__items')) && parseInt(value) < 1) {
 				localStorage.removeItem(e.target.closest('.item-cart').getAttribute('data-product-key'))
 				cartClear()
 				cartRender();
+				checkCartStatus()
 				countIconValue();
 				countTotal()
-				checkCartStatus()
+				totalUpdate()
+				orderItemsRender()
 				console.log(localStorage);
 			} else if(value < 1) 
 				value = 1;
 				e.target.closest('.quantity').querySelector('input').value = value;
 		} else if (e.target.closest('.item-cart__remove')) {
 			localStorage.removeItem(e.target.closest('.item-cart').getAttribute('data-product-key'))
-			checkCartStatus()
 			cartClear()
 			cartRender();
+			checkCartStatus()
 			countIconValue();
 			countTotal()
+			totalUpdate()
+			orderItemsRender()
 			console.log(localStorage);
 		}
-		if (e.target.hasAttribute('data-action') && e.target.closest('.cart__wrapper')) {
+		if (e.target.hasAttribute('data-action') && (e.target.closest('.order__items') || e.target.closest('.cart__wrapper'))) {
 			const product = e.target.closest('[data-product]');
 			//Записываем данные товара в объект productInfo
 			const productInfo = {
@@ -269,10 +266,10 @@ export function formQuantity() {
 			checkCartStatus()
 			countIconValue();
 			countTotal()
+			totalUpdate()
+			orderItemsRender()
 			console.log(localStorage);
 		}
 	});
 	console.log(localStorage);
 }
-
-

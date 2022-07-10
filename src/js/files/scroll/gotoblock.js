@@ -1,8 +1,7 @@
-// Подключение функционала "Чертогов Фрилансера"
 import { isMobile, menuClose, getHash, FLS } from "../functions.js";
 // Подключение дополнения для увеличения возможностей
 // Документация: https://github.com/cferdinandi/smooth-scroll
-// import SmoothScroll from 'smooth-scroll';
+import SmoothScroll from 'smooth-scroll';
 //==============================================================================================================================================================================================================================================================================================================================
 
 // Модуль плавной проктутки к блоку
@@ -36,8 +35,8 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offset = 0) 
 				behavior: "smooth"
 			});
 		}
-		FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
+		//FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
 	} else {
-		FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
+		//FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
 	}
 };

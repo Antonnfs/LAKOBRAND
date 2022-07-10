@@ -1,6 +1,3 @@
-// Включить/выключить FLS (Full Logging System) (в работе)
-//window['FLS'] = true;
-
 // Подключение основного файла стилей
 import "../scss/style.scss";
 // Плагины ============================================================================================================================================================================================================================================================================================================
@@ -16,7 +13,7 @@ import * as flsFunctions from "./files/functions.js";
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
 /* (i) необходимо для корректного отображения webp из css  */
-flsFunctions.isWebp();
+//flsFunctions.isWebp();
 /* Добавление класса touch для HTML если браузер мобильный */
  flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
@@ -65,13 +62,13 @@ flsFunctions.isWebp();
 import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы: добавление классов, работа с placeholder. */
-// flsForms.formFieldsInit();
+flsForms.formFieldsInit();
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
-// flsForms.formSubmit(true);
+flsForms.formSubmit(true);
 
 /* (В работе) Работа с масками. */
-// flsForms.formMasks();
+//flsForms.formMasks();
 
 /* Модуль формы "колличество" */
 //flsForms.formQuantity();
@@ -136,7 +133,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js
 // Сниппет(HTML):
-// flsScroll.scrollWatcher();
+ flsScroll.scrollWatcher();
 
 // Плавная навигация по странице
  flsScroll.pageNavigation();
@@ -161,6 +158,6 @@ import "./files/script.js";
 //============================================================================================================================================================================================================================================
 
 // Функционал корзины
-
-import  "./files/addToCart.js";
+import "./files/addToCart.js";
+import "./files/orderform.js"
 
