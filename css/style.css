@@ -256,6 +256,39 @@ textarea.input {
   padding: 0px 0px;
 }
 
+.checkbox {
+  position: relative;
+}
+.checkbox:not(:last-child) {
+  margin-bottom: 0.3125em;
+}
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox__input:focus + .checkbox__label:before {
+  box-shadow: 0 0 5px #000;
+}
+.checkbox__input:checked + .checkbox__label:before {
+  background: #000;
+}
+.checkbox__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+.checkbox__label:before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a7a9ac;
+}
 .options {
   display: flex;
   flex-direction: column;
@@ -1332,7 +1365,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 100;
   transition: all 0.5s ease 0s;
 }
 .header._header-scroll {
@@ -1753,6 +1786,87 @@ button.swiper-pagination-bullet {
 }
 .none {
   display: none;
+}
+
+.order {
+  margin: 30px 0;
+}
+.order__container {
+  display: grid;
+  gap: 30px;
+}
+.order__button_back {
+  justify-self: center;
+  align-self: start;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+.order__button_back:before {
+  transform: rotate(-180deg);
+  padding: 0;
+  margin: 0;
+}
+.order__button_back-left {
+  justify-self: start;
+}
+.order__subtitle {
+  font-size: 12px;
+  opacity: 0.5;
+}
+.order__body {
+  display: grid;
+}
+@media (min-width: 47.99875em) {
+  .order__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.order .order__info {
+  display: grid;
+  align-self: start;
+  gap: 15px;
+  padding: 0px 30px 30px 0px;
+}
+.order__group {
+  display: grid;
+  gap: 10px;
+}
+.order__label {
+  font-size: 18px;
+}
+.order__input {
+  width: 300px;
+  font-size: 18px;
+  padding-left: 5px;
+  border: 1px solid black;
+}
+.order__input._form-error {
+  outline: 1px solid red;
+}
+.order__items {
+  display: grid;
+  gap: 10px;
+  align-self: start;
+  justify-content: start;
+  border: 1px solid black;
+  padding: 10px;
+}
+.order__total {
+  line-height: 200%;
+  margin-bottom: 25px;
+}
+.order__empty {
+  align-items: center;
+  display: grid;
+  height: 50vh;
+  gap: 30px;
+}
+
+.form__error {
+  color: rgb(195, 33, 33);
+  font-size: 14px;
+  margin-top: -5px;
 }
 
 .mainslider {
