@@ -48,7 +48,6 @@ export function formFieldsInit() {
 			}
 			targetElement.classList.add('_form-focus');
 			targetElement.parentElement.classList.add('_form-focus');
-
 			formValidate.removeError(targetElement);
 		}
 	});

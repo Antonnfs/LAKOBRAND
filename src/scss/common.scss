@@ -28,11 +28,12 @@
 		
 		@media (any-hover: hover){
 			&:hover{
-				background: rgba(0, 0, 0, 0.781);
+				background: rgba(255, 255, 255, 0.781);
+				color: rgb(0, 0, 0);
 			}
 		}
 		&:active {
-			background: rgba(255, 255, 255, 0.097);
+			background: rgba(0, 0, 0, 0.714);
 		}
 	}
 }

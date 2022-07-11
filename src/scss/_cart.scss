@@ -179,6 +179,7 @@
 	// .order__body
 	&__body {
 		display: grid;
+		gap: 15px;
 		@media (min-width:$mobile){
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -188,6 +189,10 @@
 		align-self: start;
 		gap: 15px;
 		padding: 0px 30px 30px 0px; 
+		&:last-of-type {
+			border-left: 1px solid black;
+			padding-left: 15px;
+		}
 	}
 	// .order__group
 	&__group {
@@ -203,7 +208,8 @@
 		width: 300px;
 		font-size: 18px;
 		padding-left: 5px;
-		border: 1px solid black;
+		border: 1px solid transparent;
+		border-bottom: 1px solid black;
 		&._form-error {
 			outline: 1px solid red;
 		}
