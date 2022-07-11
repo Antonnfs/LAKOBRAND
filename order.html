@@ -5,7 +5,7 @@
 	<title>Оформлення замовлення</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220711022010">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220712014111">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -54,31 +54,36 @@
 				<div class="order__container">
 					<h1 class="order__title title">Оформити&nbsp;замовлення</h1>
 					<a href="catalog.html" class="order__button_back order__button_back-left button _icon-arrow-link">Назад</a>
-					<form data-dev action="#" method="post" target="_blank" name="f1" class="order__form">
+					<form data-goto-error id="form-send" class="order__form">
 						<div class="order__body">
 							<div class="order__info options">
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="lakobrand">
+								<input type="hidden" name="admin_email" value="anton.nfs1@gmail.com">
+								<input type="hidden" name="form_subject" value="New Customer">
+								<!-- END Hidden Required Fields -->
 								<h3 class="title title_left">Данні покупця</h3>
 								<h5 class="order__subtitle">(* - поля, обов'язкові для заповнення)</h5>
 								<div class="order__group">
 									<label for="name" class="order__label">Ваше ім'я*</label>
-									<input data-required data-validate type="text" name="form[name]" data-error="введіть ім'я" placeholder="Олег Коваленко" class="order__input input">
+									<input data-required data-validate data-error="Заповніть поле" type="text" name="name" placeholder="Олег Коваленко" class="order__input input">
 								</div>
 								<div class="order__group">
 									<label for="email" class="order__label">Ваш e-mail*</label>
-									<input data-required="email" data-validate type="email" name="form[email]" data-error="введіть корректний email" placeholder="hello@gmail.com" class="order__input input">
+									<input data-required="email" data-validate data-error="Введіть існуючий email" type="email" name="email" placeholder="hello@gmail.com" class="order__input input">
 								</div>
 								<div class="order__group">
 									<label for="tel" class="order__label">Ваш номер телефону*</label>
-									<input data-required data-validate type="tel" name="form[tel]" data-error="введіть номер телефону" placeholder="+380676456890" class="order__input input">
+									<input data-required data-validate data-error="Заповніть поле" type="tel" name="tel" placeholder="+380676456890" class="order__input input">
 								</div>
 								<h3 class="title title_left">Доставка*</h3>
 								<div class="options">
 									<div class="options__item">
-										<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option">
+										<input hidden id="o_1" class="options__input" checked type="radio" value="self-delivery" name="delivery">
 										<label for="o_1" class="options__label"><span class="options__text">Самовивіз (м. Кривий Ріг, пр. Миру 29Б)</span></label>
 									</div>
 									<div class="options__item">
-										<input hidden id="o_2" class="options__input" type="radio" value="2" name="option">
+										<input hidden id="o_2" class="options__input" type="radio" value="by Nova Poshta" name="delivery">
 										<label for="o_2" class="options__label"><span class="options__text">Доставка Новою Поштою</span></label>
 									</div>
 								</div>
@@ -86,10 +91,11 @@
 							<div class="order__info">
 								<h4 class="title title_left">Обрані товари</h4>
 								<div data-order-items class="order__items"></div>
+								<input id="total-input" name="total" hidden type="text" value="">
 							</div>
 						</div>
-						<h2 data-order-total class="order__total"></h2>
-						<button data-goto-error="_form-error" data-popup-message="_popup.html" type="submit" class="button button_black">Купити</button>
+						<div data-order-total class="order__total"></div>
+						<button type="submit" class="button button_black">Купити</button>
 					</form>
 				</div>
 			</section>
@@ -183,7 +189,10 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220711022010"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js?_v=20220712014111"></script>
+	<script src="js/app.min.js?_v=20220712014111"></script>
+
+
 </body>
 
 </html>
